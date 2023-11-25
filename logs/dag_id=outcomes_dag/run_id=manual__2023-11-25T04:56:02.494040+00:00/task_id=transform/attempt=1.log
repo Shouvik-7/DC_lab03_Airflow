@@ -1,0 +1,68 @@
+[2023-11-25T04:57:07.490+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: outcomes_dag.transform manual__2023-11-25T04:56:02.494040+00:00 [queued]>
+[2023-11-25T04:57:07.494+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: outcomes_dag.transform manual__2023-11-25T04:56:02.494040+00:00 [queued]>
+[2023-11-25T04:57:07.495+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-25T04:57:07.502+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform> on 2023-11-25 04:56:02.494040+00:00
+[2023-11-25T04:57:07.512+0000] {standard_task_runner.py:57} INFO - Started process 122 to run task
+[2023-11-25T04:57:07.515+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'outcomes_dag', 'transform', 'manual__2023-11-25T04:56:02.494040+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/outcomes_dag.py', '--cfg-path', '/tmp/tmpyftovt09']
+[2023-11-25T04:57:07.518+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask transform
+[2023-11-25T04:57:07.549+0000] {task_command.py:416} INFO - Running <TaskInstance: outcomes_dag.transform manual__2023-11-25T04:56:02.494040+00:00 [running]> on host 9c18922f4e6b
+[2023-11-25T04:57:07.597+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='outcomes_dag' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2023-11-25T04:56:02.494040+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-25T04:56:02.494040+00:00'
+[2023-11-25T04:57:08.101+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:31: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['ts'] = pd.to_datetime(date_dim['ts'])
+
+[2023-11-25T04:57:08.103+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:32: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['year'] = date_dim['ts'].apply(lambda x: int(x.year))
+
+[2023-11-25T04:57:08.105+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:33: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['month'] = date_dim['ts'].apply(lambda x: int(x.month))
+
+[2023-11-25T04:57:08.106+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:34: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['day'] = date_dim['ts'].apply(lambda x: int(x.day))
+
+[2023-11-25T04:57:08.108+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:35: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['hour'] = date_dim['ts'].apply(lambda x: int(x.hour))
+
+[2023-11-25T04:57:08.109+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:36: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['minute'] = date_dim['ts'].apply(lambda x: int(x.minute))
+
+[2023-11-25T04:57:08.111+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:37: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  date_dim['second'] = date_dim['ts'].apply(lambda x: int(x.second))
+
+[2023-11-25T04:57:08.112+0000] {warnings.py:109} WARNING - /opt/***/dags/etl_scripts/transform.py:43: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data['outcome_type'] = data['outcome_type'].apply(lambda x: str(x))
+
+[2023-11-25T04:57:08.735+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-25T04:57:08.757+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=outcomes_dag, task_id=transform, execution_date=20231125T045602, start_date=20231125T045707, end_date=20231125T045708
+[2023-11-25T04:57:08.813+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
