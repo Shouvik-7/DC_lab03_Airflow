@@ -1,0 +1,42 @@
+[2023-11-25T03:57:26.185+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T03:57:26.196+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T03:57:26.196+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-25T03:57:26.226+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_outcomes_fct> on 2023-11-24 00:00:00+00:00
+[2023-11-25T03:57:26.237+0000] {standard_task_runner.py:57} INFO - Started process 118 to run task
+[2023-11-25T03:57:26.245+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'outcomes_dag', 'load_outcomes_fct', 'scheduled__2023-11-24T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/outcomes_dag.py', '--cfg-path', '/tmp/tmpkztq81b_']
+[2023-11-25T03:57:26.250+0000] {standard_task_runner.py:85} INFO - Job 15: Subtask load_outcomes_fct
+[2023-11-25T03:57:26.346+0000] {task_command.py:416} INFO - Running <TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [running]> on host 249ddc905274
+[2023-11-25T03:57:26.420+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='outcomes_dag' AIRFLOW_CTX_TASK_ID='load_outcomes_fct' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-24T00:00:00+00:00'
+[2023-11-25T03:57:31.413+0000] {logging_mixin.py:154} INFO - fct_outcomes loaded
+[2023-11-25T03:57:31.415+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-25T03:57:31.437+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=outcomes_dag, task_id=load_outcomes_fct, execution_date=20231124T000000, start_date=20231125T035726, end_date=20231125T035731
+[2023-11-25T03:57:31.472+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-25T03:57:31.485+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-11-25T08:45:05.206+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T08:45:05.211+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T08:45:05.212+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-25T08:45:05.223+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_outcomes_fct> on 2023-11-24 00:00:00+00:00
+[2023-11-25T08:45:05.232+0000] {standard_task_runner.py:57} INFO - Started process 107 to run task
+[2023-11-25T08:45:05.238+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'outcomes_dag', 'load_outcomes_fct', 'scheduled__2023-11-24T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/outcomes_dag.py', '--cfg-path', '/tmp/tmpudxx1gfk']
+[2023-11-25T08:45:05.245+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask load_outcomes_fct
+[2023-11-25T08:45:05.348+0000] {task_command.py:416} INFO - Running <TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [running]> on host 2386755a61be
+[2023-11-25T08:45:05.390+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='outcomes_dag' AIRFLOW_CTX_TASK_ID='load_outcomes_fct' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-24T00:00:00+00:00'
+[2023-11-25T08:45:08.021+0000] {logging_mixin.py:154} INFO - outcome_fct loaded
+[2023-11-25T08:45:08.022+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-25T08:45:08.040+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=outcomes_dag, task_id=load_outcomes_fct, execution_date=20231124T000000, start_date=20231125T084505, end_date=20231125T084508
+[2023-11-25T08:45:08.075+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-25T08:45:08.094+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-11-25T08:48:04.638+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T08:48:04.641+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [queued]>
+[2023-11-25T08:48:04.642+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-25T08:48:04.646+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): load_outcomes_fct> on 2023-11-24 00:00:00+00:00
+[2023-11-25T08:48:04.650+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2023-11-25T08:48:04.653+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'outcomes_dag', 'load_outcomes_fct', 'scheduled__2023-11-24T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/outcomes_dag.py', '--cfg-path', '/tmp/tmp3rjpre1h']
+[2023-11-25T08:48:04.656+0000] {standard_task_runner.py:85} INFO - Job 9: Subtask load_outcomes_fct
+[2023-11-25T08:48:04.692+0000] {task_command.py:416} INFO - Running <TaskInstance: outcomes_dag.load_outcomes_fct scheduled__2023-11-24T00:00:00+00:00 [running]> on host 032cc147d54c
+[2023-11-25T08:48:04.734+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='outcomes_dag' AIRFLOW_CTX_TASK_ID='load_outcomes_fct' AIRFLOW_CTX_EXECUTION_DATE='2023-11-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-24T00:00:00+00:00'
+[2023-11-25T08:48:07.934+0000] {logging_mixin.py:154} INFO - outcome_fct loaded
+[2023-11-25T08:48:07.936+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-11-25T08:48:07.955+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=outcomes_dag, task_id=load_outcomes_fct, execution_date=20231124T000000, start_date=20231125T084804, end_date=20231125T084807
+[2023-11-25T08:48:08.016+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-25T08:48:08.034+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
