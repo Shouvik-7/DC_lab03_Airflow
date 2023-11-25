@@ -1,0 +1,22 @@
+[2023-11-19T09:32:53.827+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: outcomes_dag.extract2 manual__2023-11-19T09:32:48.798831+00:00 [queued]>
+[2023-11-19T09:32:53.855+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: outcomes_dag.extract2 manual__2023-11-19T09:32:48.798831+00:00 [queued]>
+[2023-11-19T09:32:53.858+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-19T09:32:53.900+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): extract2> on 2023-11-19 09:32:48.798831+00:00
+[2023-11-19T09:32:53.914+0000] {standard_task_runner.py:57} INFO - Started process 99 to run task
+[2023-11-19T09:32:53.946+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'outcomes_dag', 'extract2', 'manual__2023-11-19T09:32:48.798831+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/outcomes_dag.py', '--cfg-path', '/tmp/tmpdd2kuxdk']
+[2023-11-19T09:32:53.974+0000] {standard_task_runner.py:85} INFO - Job 11: Subtask extract2
+[2023-11-19T09:32:54.210+0000] {task_command.py:416} INFO - Running <TaskInstance: outcomes_dag.extract2 manual__2023-11-19T09:32:48.798831+00:00 [running]> on host 696613a1ef55
+[2023-11-19T09:32:54.395+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='outcomes_dag' AIRFLOW_CTX_TASK_ID='extract2' AIRFLOW_CTX_EXECUTION_DATE='2023-11-19T09:32:48.798831+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-19T09:32:48.798831+00:00'
+[2023-11-19T09:32:54.865+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_scripts/extract.py", line 11, in extract_data
+    target_dir = Path(target)
+NameError: name 'target' is not defined
+[2023-11-19T09:32:54.873+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=outcomes_dag, task_id=extract2, execution_date=20231119T093248, start_date=20231119T093253, end_date=20231119T093254
+[2023-11-19T09:32:54.886+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 11 for task extract2 (name 'target' is not defined; 99)
+[2023-11-19T09:32:54.910+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-11-19T09:32:54.924+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
